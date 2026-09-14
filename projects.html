@@ -1,278 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>~/projects</title>
-
-<style>
-body {
-    background: #000;
-    color: #00ff7f;
-    font-family: "Courier New", monospace;
-    padding: 40px;
-    margin: 0;
-}
-
-.prompt {
-    color: #7fdfff;
-}
-
-.section {
-    margin: 20px 0;
-}
-
-.project {
-    border-left: 3px solid #00ff7f;
-    padding-left: 20px;
-    margin-bottom: 50px;
-}
-
-.label {
-    color: #ffbd2e;
-    font-weight: bold;
-}
-
-h2 {
-    color: #ff7fff;
-}
-
-h2 a {
-    color: #ff7fff;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-h2 a:hover {
-    color: #ffd700;
-    text-shadow: 0 0 10px #ff7fff;
-}
-
-.cursor {
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background: #00ff7f;
-    animation: blink 1s infinite;
-    margin-left: 5px;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-.input-line {
-    display: inline;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    body {
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .project {
-        padding-left: 15px;
-        margin-bottom: 40px;
-    }
-
-    h2 {
-        font-size: 1.3em;
-        word-wrap: break-word;
-    }
-
-    .section {
-        margin: 15px 0;
-        line-height: 1.6;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 15px;
-        font-size: 13px;
-    }
-
-    h2 {
-        font-size: 1.1em;
-    }
-
-    .project {
-        padding-left: 10px;
-    }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Arhan Chavare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>Arhan Chavare</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a class="active" href="projects.html">Projects</a>
+      </div>
+    </nav>
+  </header>
 
-<div class="prompt">arhan@portfolio:~/projects$ ls</div>
-<br><br>
+  <main class="shell page-layout">
+    <aside class="side-card">
+      <p class="page-kicker">Projects</p>
+      <h2>Robots, policies, and real hardware.</h2>
+      <p>A few things I have built while exploring robot learning, perception, simulation, and hardware.</p>
+    </aside>
+    <section class="content-stack" aria-label="Project list">
+      <article class="content-card project-card rubiknet-card">
+        <div class="project-media media-gallery rubiknet-media">
+          <img src="assets/rubiknet.gif" alt="RubikNet solving demo" />
+          <img src="assets/rubiknet.png" alt="RubikNet project visual" />
+          <video src="assets/rubikne.mov" autoplay muted loop playsinline controls aria-label="RubikNet hardware demo"></video>
+        </div>
+        <div class="card-head">
+          <div>
+            <h3>RubikNet</h3>
+            <div class="meta">Deep RL Rubik's Cube solver with robotic actuation</div>
+          </div>
+          <span class="date">Jun 2025 - Sep 2025</span>
+        </div>
+        <ul>
+          <li>Developed a Rubik's Cube solver using deep reinforcement learning, search algorithms, and robotic actuation.</li>
+          <li>Built a custom cube simulator and dataset generator for policy/value training using Autodidactic Iteration.</li>
+          <li>Achieved 99% solve accuracy up to 8 scrambles and 80% accuracy for 10-12 scrambles.</li>
+        </ul>
+        <div class="tags"><span class="tag">PyTorch</span><span class="tag">RL</span><span class="tag">Search</span><span class="tag">Robotic Actuation</span></div>
+        <div class="project-links">
+          <a class="repo-link" href="https://github.com/4rhan/RubikNet" target="_blank" rel="noreferrer">GitHub repository</a>
+        </div>
+      </article>
+      <article class="content-card project-card bionic-card">
+        <div class="project-media media-gallery">
+          <video src="assets/amazing.mp4" autoplay muted loop playsinline controls aria-label="Bionic hand demo"></video>
+          <video src="assets/hand_move%20(1).mp4" autoplay muted loop playsinline controls aria-label="Bionic hand movement demo"></video>
+        </div>
+        <div class="card-head">
+          <div>
+            <h3>Bionic Hand</h3>
+            <div class="meta">Dexterous hand retargeting and behavior cloning</div>
+          </div>
+          <span class="date">Jan 2026 - Mar 2026</span>
+        </div>
+        <ul>
+          <li>Built the Amazing Hand and integrated it with a robotic arm for in-hand manipulation tasks.</li>
+          <li>Mapped MANO hand parameters and human fingertip trajectories to robotic hand motions.</li>
+          <li>Trained and deployed a behavior cloning policy from retargeted demonstrations on the physical hand.</li>
+        </ul>
+        <div class="tags"><span class="tag">MANO</span><span class="tag">Behavior Cloning</span><span class="tag">Dexterous Hand</span><span class="tag">Hardware</span></div>
+        <div class="project-links">
+          <a class="repo-link" href="https://github.com/4rhan/Bionic-Hand" target="_blank" rel="noreferrer">GitHub repository</a>
+        </div>
+      </article>
+      <article class="content-card project-card visuomotor-card">
+        <div class="project-media">
+          <video src="assets/act_cup_stackinh.mp4" autoplay muted loop playsinline controls aria-label="Camera-conditioned visuomotor policy demo"></video>
+        </div>
+        <div class="card-head">
+          <div>
+            <h3>Camera-Conditioned Visuomotor Policies</h3>
+            <div class="meta">View-invariant perception for manipulation</div>
+          </div>
+          <span class="date">Aug 2026 - Present</span>
+        </div>
+        <ul>
+          <li>Improved camera-conditioned visuomotor policies by redesigning a robust Plucker ray embeddings pipeline.</li>
+          <li>Built on spatial representation ideas from "Do You Know Where Your Camera Is?"</li>
+          <li>Validated the pipeline on a physical SO-101 arm using the ACT policy framework.</li>
+        </ul>
+        <div class="tags"><span class="tag">ACT</span><span class="tag">Visuomotor</span><span class="tag">Plucker Rays</span><span class="tag">SO-101</span></div>
+        <div class="project-links">
+          <a class="repo-link" href="https://github.com/4rhan/lerobot_" target="_blank" rel="noreferrer">GitHub repository</a>
+        </div>
+      </article>
+      <article class="content-card project-card drone-card">
+        <div class="card-head">
+          <div>
+            <h3>Anti-Drone System</h3>
+            <div class="meta">Smart India Hackathon 2025 finalist project</div>
+          </div>
+          <span class="date">Dec 2025</span>
+        </div>
+        <ul>
+          <li>Combined YOLO-based drone detection with RF signal analysis for robust aerial target identification.</li>
+          <li>Built a 2-DoF autonomous drone tracking system and demonstrated ESP-NOW communication spoofing.</li>
+        </ul>
+        <div class="tags"><span class="tag">YOLO</span><span class="tag">RF Analysis</span><span class="tag">ESP-NOW</span><span class="tag">Tracking</span></div>
+        <div class="project-links">
+          <a class="repo-link" href="https://github.com/4rhan/anti_drone" target="_blank" rel="noreferrer">GitHub repository</a>
+        </div>
+      </article>
+    </section>
+  </main>
 
-<!-- ===================== -->
-<!-- RUBIKNET -->
-<!-- ===================== -->
-
-<div class="project">
-    <h2><a href="https://github.com/badboy1606/Rubiknet" target="_blank">RubikNet — RL Powered Rubik's Cube Solver</a></h2>
-
-    <div class="section">
-        <span class="label">Overview:</span>
-        Built an intelligent Rubik's Cube solving system integrating Deep Reinforcement Learning,
-        A*, Beam Search, and robotic actuation.
-    </div>
-
-    <div class="section">
-        <span class="label">Core Innovation:</span>
-        Designed a cube simulator and dataset generator in Python to train policy and value
-        networks using Autodidactic Iteration (ADI).
-    </div>
-
-    <div class="section">
-        <span class="label">Performance:</span>
-        Achieved 99% solve accuracy up to 8 scrambles and 80% accuracy for 10–12 scrambles
-        using reward engineering and policy optimization.
-    </div>
-
-    <div class="section">
-        <span class="label">Hardware Integration:</span>
-        Engineered an ESP32-controlled platform using NEMA 17 stepper motors and DRV8825 drivers.
-        Integrated OpenCV-based vision for cube detection and real-time UART communication.
-    </div>
-
-    <div class="section">
-        <span class="label">Tech Stack:</span>
-        Python, PyTorch, OpenCV, ESP32, ESP-IDF, DRV8825, NEMA 17, MCTS
-    </div>
-</div>
-
-<!-- ===================== -->
-<!-- ANTI DRONE -->
-<!-- ===================== -->
-
-<div class="project">
-    <h2><a href="https://github.com/badboy1606/anti_drone" target="_blank">Anti-Drone Detection System (SIH 2025 Finalist)</a></h2>
-
-    <div class="section">
-        <span class="label">Overview:</span>
-        Developed a hybrid drone detection system combining computer vision and RF-based classification.
-    </div>
-
-    <div class="section">
-        <span class="label">Vision Pipeline:</span>
-        Built a detection pipeline using OpenCV and the Moondream Vision-Language Model.
-    </div>
-
-    <div class="section">
-        <span class="label">RF Intelligence:</span>
-        Designed a 2.4 GHz RF-based classification algorithm under dense Wi-Fi interference
-        and implemented RF fingerprinting to classify friendly vs hostile UAVs.
-    </div>
-
-    <div class="section">
-        <span class="label">Hardware:</span>
-        Built a 2-DOF pan-tilt tracking system and demonstrated ESP-NOW spoofing concepts.
-    </div>
-
-    <div class="section">
-        <span class="label">Achievement:</span>
-        Smart India Hackathon 2025 Finalist (ITBP Problem Statement).
-    </div>
-</div>
-
-<!-- ===================== -->
-<!-- MORSE CODE -->
-<!-- ===================== -->
-
-<div class="project">
-    <h2><a href="https://github.com/badboy1606/Morse-code-detector" target="_blank">Morse Code Detector using EOG Signals</a></h2>
-
-    <div class="section">
-        <span class="label">Overview:</span>
-        Developed an assistive communication system using Electrooculography (EOG).
-    </div>
-
-    <div class="section">
-        <span class="label">Signal Acquisition:</span>
-        Recorded EOG signals using BioAmp EXG Pill hardware.
-    </div>
-
-    <div class="section">
-        <span class="label">Signal Processing:</span>
-        Detected and classified short and long eye blinks mapped to Morse code.
-    </div>
-
-    <div class="section">
-        <span class="label">Interface:</span>
-        Built a Streamlit-based real-time decoding interface in Python.
-    </div>
-</div>
-
-<!-- ===================== -->
-<!-- NEUROGYM -->
-<!-- ===================== -->
-
-<div class="project">
-    <h2>NeuroGym — Reinforcement Learning from Scratch</h2>
-
-    <div class="section">
-        <span class="label">Overview:</span>
-        Implemented foundational Reinforcement Learning algorithms from scratch.
-    </div>
-
-    <div class="section">
-        <span class="label">Algorithms:</span>
-        ϵ-greedy policy, Tabular Q-learning, Dynamic Programming.
-    </div>
-
-    <div class="section">
-        <span class="label">Environments:</span>
-        Solved CartPole, Taxi, Blackjack, MountainCar, LunarLander (OpenAI Gym).
-    </div>
-
-    <div class="section">
-        <span class="label">Deep Learning:</span>
-        Trained CNNs on MNIST & Fashion-MNIST and built a DQN-based autonomous Snake agent.
-        <br>type cd .. to go back <br>
-    </div>
-</div>
-
-<br><br>
-
-<!-- TERMINAL INPUT -->
-<div>
-    <span class="prompt">arhan@portfolio:~/projects$ </span>
-    <span id="typedCommand"></span>
-    <span class="cursor"></span>
-</div>
-
-<script>
-let command = "";
-const typed = document.getElementById("typedCommand");
-
-document.addEventListener("keydown", function(e) {
-
-    if (e.key.length === 1 && !e.ctrlKey) {
-        command += e.key;
-    }
-
-    if (e.key === "Backspace") {
-        command = command.slice(0, -1);
-    }
-
-    if (e.key === "Enter") {
-
-        if (command.trim().toLowerCase() === "cd ..") {
-            window.location.href = "index.html";
-        }
-
-        command = "";
-    }
-
-    typed.textContent = command;
-});
-</script>
-
+  <footer class="shell footer-contact">
+    <span>© 2026 Arhan Chavare.</span>
+    <span><a href="mailto:arhanjain1606@gmail.com">arhanjain1606@gmail.com</a></span>
+    <span><a href="https://www.linkedin.com/in/arhan-chavare" target="_blank" rel="noreferrer">LinkedIn</a></span>
+  </footer>
 </body>
 </html>

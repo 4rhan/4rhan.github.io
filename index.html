@@ -1,335 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$ whoami</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    width: 100vw;
-    font-family: "Courier New", monospace;
-    background: #000;
-    overflow: hidden;
-}
-
-/* ============================= */
-/* LEFT PROFILE SECTION */
-/* ============================= */
-
-.profile-section {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 45%;
-    height: 100vh;
-    background: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 80px;
-    border-right: 2px solid #ffd700;
-}
-
-.profile-pic {
-    width: 240px;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 2px solid #ffd700;
-    margin-bottom: 40px;
-}
-
-.ascii-art {
-    color: #00ff99;
-    font-size: 14px;
-    text-align: center;
-    line-height: 1.3;
-    white-space: pre;
-}
-
-/* Webring Button */
-.webring-container {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.webring-container a {
-    display: inline-block;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.webring-container a:hover {
-    transform: scale(1.1) rotate(5deg);
-    filter: drop-shadow(0 0 10px #ffd700);
-}
-
-.webring-container img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-}
-
-.webring-label {
-    color: #ffd700;
-    font-size: 12px;
-    margin-top: 8px;
-}
-
-/* ============================= */
-/* TERMINAL SECTION */
-/* ============================= */
-
-.terminal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 55%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
-    border-left: 2px solid #ffd700;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.terminal::-webkit-scrollbar {
-    width: 8px;
-}
-
-.terminal::-webkit-scrollbar-thumb {
-    background: #ffd700;
-}
-
-#terminalBody {
-    color: #cccccc;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.prompt {
-    color: #4fc3f7;
-}
-
-.command-text {
-    color: #ffffff;
-}
-
-.output-text {
-    color: #00ff99;
-    white-space: pre-wrap;
-}
-
-.section-title {
-    color: #ffd700;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.input-line {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-}
-
-input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 15px;
-    flex: 1;
-    caret-color: #ffd700;
-}
-
-/* Cursor */
-@keyframes blink {
-    0%, 49% { opacity: 1; }
-    50%, 100% { opacity: 0; }
-}
-
-.cursor {
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background: #ffd700;
-    margin-left: 2px;
-    animation: blink 1s infinite;
-}
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-    body {
-        overflow-y: auto;
-    }
-
-    .profile-section {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 40px 0;
-        border-right: none;
-        border-bottom: 2px solid #ffd700;
-    }
-
-    .terminal {
-        width: 100%;
-        position: relative;
-        height: auto;
-    }
-
-    .profile-pic {
-        width: 200px;
-        height: 200px;
-    }
-
-    .ascii-art {
-        font-size: 12px;
-    }
-
-    .webring-container {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-pic {
-        width: 160px;
-        height: 160px;
-    }
-
-    .ascii-art {
-        font-size: 10px;
-    }
-
-    .webring-container img {
-        width: 40px;
-        height: 40px;
-    }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Arhan Chavare, robotics and reinforcement learning student at VJTI Mumbai." />
+  <title>Arhan Chavare | Robotics and RL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>Arhan Chavare</a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </nav>
+  </header>
 
-<!-- LEFT PROFILE -->
-<div class="profile-section">
+  <main class="shell">
+    <section class="page-grid" aria-labelledby="intro-title">
+      <div>
+        <p class="page-kicker">Robotics, RL and perception</p>
+        <h1 id="intro-title">Arhan <span class="highlight">Chavare</span></h1>
+        <p class="lede">I am an Electronics and Telecommunication Engineering student at VJTI Mumbai with a Data Science minor. My work sits around dexterous manipulation, reinforcement learning, visuomotor policies, and hardware-aware robotics software.</p>
+        <div class="actions">
+          <a class="button primary" href="projects.html">See projects</a>
+          <a class="button" href="mailto:arhanjain1606@gmail.com">Email me</a>
+        </div>
+        <div class="stats" aria-label="Profile summary">
+          <div class="stat"><span>Current</span><strong>RRC, IIIT Hyderabad</strong></div>
+          <div class="stat"><span>Education</span><strong>VJTI Mumbai</strong></div>
+          <div class="stat"><span>CGPA</span><strong>8.39 / 10</strong></div>
+        </div>
+      </div>
+      <aside class="portrait-card" aria-label="Photo of Arhan Chavare">
+        <img src="image.jpeg" alt="Arhan Chavare" />
+      </aside>
+    </section>
+  </main>
 
-    <!-- PHOTO -->
-    <img src="image.jpeg" alt="Arhan" class="profile-pic">
-
-    <!-- ASCII HELLO -->
-    <pre class="ascii-art">
-██╗  ██╗███████╗██╗     ██╗      ██████╗ 
-██║  ██║██╔════╝██║     ██║     ██╔═══██╗
-███████║█████╗  ██║     ██║     ██║   ██║
-██╔══██║██╔══╝  ██║     ██║     ██║   ██║
-██║  ██║███████╗███████╗███████╗╚██████╔╝
-╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ 
-    </pre>
-
-    <!-- WEBRING BUTTON -->
-    <div class="webring-container">
-        <a href="https://sravjti.in/webring/redirect.html?site=YOUR_SITE" title="SRA Webring" target="_blank">
-            <img src="https://sravjti.in/webring/khopdi.svg" alt="SRA Webring">
-        </a>
-        <div class="webring-label">SRA Webring</div>
-    </div>
-
-</div>
-
-<!-- TERMINAL -->
-<div class="terminal">
-    <div id="terminalBody"></div>
-
-    <div class="input-line">
-        <span class="prompt">arhan@portfolio:~$ </span>
-        <input type="text" id="commandInput" autofocus placeholder="Type 'cd projects' to view projects...">
-    </div>
-</div>
-
-<script>
-const input = document.getElementById("commandInput");
-const terminalBody = document.getElementById("terminalBody");
-
-const autoDisplayContent = [
-    { type: 'text', content: 'Welcome to Arhan\'s Portfolio Terminal' },
-    { type: 'separator' },
-    { type: 'title', content: '$ whoami' },
-    { type: 'output', content: 'Arhan | Electronics & Telecommunication | will graduate in 2028' },
-    { type: 'separator' },
-    { type: 'title', content: '$ philosophy' },
-    { type: 'output', content: '"If you don\'t sacrifice for what you want, what you want becomes the sacrifice."\nBuild. Break. Learn. Repeat.' },
-    { type: 'separator' },
-    { type: 'title', content: '$ interests' },
-    { type: 'output', content: '• machine learning\n• opencv\n• embedded\n• open-source' },
-    { type: 'separator' },
-    { type: 'title', content: '$ projects' },
-    { type: 'output', content: '• rubiks cube solver\n• anti drone system\n• eog morse code detector\n\n(Type: cd projects to open full page)' },
-    { type: 'separator' },
-    { type: 'title', content: '$ sidequests' },
-    { type: 'output', content: 'A music lover, tabla from std 2, drums from std 6 (Trinity Grade 6), part-time keyboardist' },
-    { type: 'separator' },
-    { type: 'text', content: 'Type cd projects to view detailed projects page.' }
-];
-
-function displayAutoContent() {
-    autoDisplayContent.forEach((item, index) => {
-        setTimeout(() => {
-            let html = '';
-            if (item.type === 'title') html = `<div class="section-title">${item.content}</div>`;
-            if (item.type === 'output') html = `<div class="output-text" style="margin-left:20px;">${item.content}</div>`;
-            if (item.type === 'separator') html = '<br>';
-            if (item.type === 'text') html = `<div>${item.content}</div>`;
-
-            terminalBody.innerHTML += html;
-            terminalBody.scrollTop = terminalBody.scrollHeight;
-        }, index * 200);
-    });
-}
-
-window.onload = displayAutoContent;
-
-input.addEventListener("keydown", e => {
-    if (e.key === "Enter") {
-        const command = input.value.trim().toLowerCase();
-
-        terminalBody.innerHTML += `
-        <div style="margin-top:15px;">
-            <span class="prompt">arhan@portfolio:~$ </span>
-            <span class="command-text">${input.value}</span>
-        </div>`;
-
-        if (command === "cd projects") {
-            terminalBody.innerHTML += `<div class="output-text" style="margin-left:20px;">Opening projects page<span class="cursor"></span></div><br>`;
-            setTimeout(() => window.location.href = "projects.html", 1000);
-        } else if (command === "clear") {
-            terminalBody.innerHTML = "";
-            displayAutoContent();
-        } else {
-            terminalBody.innerHTML += `<div class="output-text" style="margin-left:20px;">Command not recognized.</div><br>`;
-        }
-
-        input.value = "";
-        terminalBody.scrollTop = terminalBody.scrollHeight;
-    }
-});
-
-document.addEventListener("click", () => input.focus());
-</script>
-
+  <footer class="shell footer-contact">
+    <span>© 2026 Arhan Chavare.</span>
+    <span><a href="mailto:arhanjain1606@gmail.com">arhanjain1606@gmail.com</a></span>
+    <span><a href="https://www.linkedin.com/in/arhan-chavare" target="_blank" rel="noreferrer">LinkedIn</a></span>
+  </footer>
 </body>
 </html>
