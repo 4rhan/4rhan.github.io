@@ -9,7 +9,6 @@
   --accent-2: #ec4899;
   --accent-3: #14b8a6;
   --accent-4: #f59e0b;
-  --grad: linear-gradient(90deg, var(--accent-1), var(--accent-2) 50%, var(--accent-4));
   --max: 1020px;
 }
 
@@ -224,7 +223,7 @@ li + li { margin-top: 6px; }
 
 /* ---------- Colour ---------- */
 .site-header { position: relative; }
-.site-header::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: var(--grad); background-size: 200% 100%; animation: grad-shift 8s linear infinite; }
+.site-header::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-4), var(--accent-1)); background-size: 200% 100%; animation: grad-shift 8s linear infinite; }
 @keyframes grad-shift { to { background-position: 200% 0; } }
 .nav-links a.active { border-color: var(--accent-1); }
 .nav-links a.active:hover { border-color: var(--accent-1); }
@@ -234,55 +233,24 @@ li + li { margin-top: 6px; }
 
 /* Section headings take a deeper shade of their marker colour */
 .portfolio-section h2 { color: #3730a3; }
-.portfolio-section:nth-of-type(3) h2 { color: #9d174d; }
-.portfolio-section:nth-of-type(4) h2 { color: #115e59; }
+[aria-labelledby="selected-work-title"] h2 { color: #9d174d; }
+[aria-labelledby="experience-title"] h2 { color: #115e59; }
 .contact-section h2 { color: #92400e; }
 
 /* Gradient ring around the portrait */
 .profile-intro .portrait-card { padding: 4px; border-radius: 50%; background: conic-gradient(var(--accent-1), var(--accent-2), var(--accent-4), var(--accent-3), var(--accent-1)); }
 .profile-intro .portrait-card img { border: 3px solid var(--page); }
 
-/* Coloured marker before section headings */
-.portfolio-section h2::before, .contact-section h2::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 10px; border-radius: 3px; background: var(--accent-1); vertical-align: middle; transform: translateY(-2px); }
-.portfolio-section:nth-of-type(3) h2::before { background: var(--accent-2); }
-.portfolio-section:nth-of-type(4) h2::before { background: var(--accent-3); }
-.contact-section h2::before { background: var(--accent-4); }
+.tag:hover { border-color: #c9c9c9; color: var(--ink); }
 
-/* About facts get coloured labels */
-.profile-facts > div { padding-left: 12px; border-left: 3px solid var(--accent-1); }
-.profile-facts > div:nth-child(2) { border-color: var(--accent-2); }
-.profile-facts > div:nth-child(3) { border-color: var(--accent-3); }
-
-/* Year pills */
-.work-year { padding: 0 9px; border-radius: 999px; background: #eef0ff; color: var(--accent-1); font-weight: 500; }
-
-/* Accent bar slides in on hovered rows and cards */
-.work-item, .content-card { position: relative; }
-.work-item::before, .content-card::before { content: ""; position: absolute; left: -16px; top: 18px; bottom: 18px; width: 3px; border-radius: 3px; background: var(--grad); transform: scaleY(0); transition: transform .3s ease; }
-.work-item:hover::before, .content-card:hover::before { transform: scaleY(1); }
-.content-card:first-child::before { top: 0; }
-
-/* Colourful tags, cycling through the palette */
-.tag { border-color: #e0e3ff; background: #eef0ff; color: #4338ca; }
-.tag:nth-child(4n+2) { border-color: #fbd5e8; background: #fdf0f6; color: #be185d; }
-.tag:nth-child(4n+3) { border-color: #c4f1ea; background: #ecfdf8; color: #0f766e; }
-.tag:nth-child(4n+4) { border-color: #fde7b0; background: #fff8e6; color: #b45309; }
-.tag:hover { border-color: currentColor; }
-
-.contact-email { color: var(--accent-2); }
-.date { color: var(--accent-1); }
-
-@media (max-width: 560px) {
-  .work-item::before, .content-card::before { left: -10px; }
-}
 @media (prefers-reduced-motion: reduce) {
   .site-header::before { animation: none; }
 }
 
 /* Coming-soon badge on blog posts */
 @keyframes soon-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
-.soon-badge { display: inline-flex; align-items: center; gap: 7px; flex: 0 0 auto; padding: 2px 10px; border: 1px solid #fde7b0; border-radius: 999px; background: #fff8e6; color: #b45309; font-size: .8rem; font-weight: 600; white-space: nowrap; }
-.soon-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-4); animation: soon-pulse 1.6s ease-in-out infinite; }
+.soon-badge { display: inline-flex; align-items: center; gap: 7px; flex: 0 0 auto; padding: 2px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--soft); color: var(--muted); font-size: .8rem; font-weight: 600; white-space: nowrap; }
+.soon-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: soon-pulse 1.6s ease-in-out infinite; }
 @media (max-width: 560px) { .soon-badge { margin-top: 8px; } }
 
 /* ---------- Blog ---------- */
@@ -314,3 +282,23 @@ li + li { margin-top: 6px; }
 .post-body th, .post-body td { padding: 8px 10px; border: 1px solid var(--line); text-align: left; }
 .post-body hr { margin: 36px 0; border: 0; border-top: 1px solid var(--line); }
 .post-body .katex-display { margin: 22px 0; overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
+
+/* Current work on the home page */
+.current-work h2 { color: #92400e; }
+.current-work h3 { margin: 4px 0 8px; font-size: 1.08rem; }
+.current-work > p { margin-bottom: 0; }
+.current-work ul { margin-top: 12px; }
+.results-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.results-grid > div { display: grid; gap: 1px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--soft); transition: transform .25s ease; }
+.results-grid > div:hover { transform: translateY(-3px); }
+.results-grid strong { color: var(--ink); font-size: 1.45rem; line-height: 1.2; letter-spacing: -.03em; }
+.results-grid span { font-weight: 600; font-size: .93rem; }
+.results-grid small { color: var(--muted); font-size: .82rem; line-height: 1.4; }
+@media (max-width: 560px) { .results-grid { grid-template-columns: 1fr; } }
+.current-work > p.current-credit { margin: -4px 0 10px; color: var(--muted); font-size: .9rem; }
+
+/* Single image inside an experience card */
+.card-figure { max-width: 320px; margin: 18px 0 0; }
+.card-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s ease; }
+.card-figure img:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0, 0, 0, .08); }
+.card-figure figcaption { margin-top: 6px; color: var(--muted); font-size: .85rem; }

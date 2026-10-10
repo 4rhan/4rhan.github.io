@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
   <header class="site-header">
@@ -49,6 +49,27 @@
         <div><span>Research</span><strong>RRC, IIIT Hyderabad</strong><small>Robotics Research Centre</small></div>
         <div><span>Interests</span><strong>Robot learning</strong><small>Dexterous manipulation · Visual policies · Sim-to-real</small></div>
       </div>
+    </section>
+
+    <section class="portfolio-section current-work" aria-labelledby="current-work-title">
+      <div class="section-heading">
+        <h2 id="current-work-title">Current work</h2>
+        <a href="https://github.com/4rhan/squint_/tree/feat/scripted-demos" target="_blank" rel="noreferrer">Code <span aria-hidden="true">→</span></a>
+      </div>
+      <h3>Long-horizon manipulation on the SO-101 with Q-chunking</h3>
+      <p class="current-credit">Joint work with Prajwal Avhad</p>
+      <p>I’m extending <a href="https://aalmuzairee.github.io/squint" target="_blank" rel="noreferrer">Squint</a>, a fast visual RL method for sim-to-real on the SO-101 arm, to multi-stage tasks like stacking, unstacking and packing several cubes, which plain RL from scratch doesn’t solve.</p>
+      <ul>
+        <li>Built new long-horizon tasks (unstacking, towers, tray packing, rearranging) with scripted motion-planning solvers that record demonstrations in the policy’s own observation and action format.</li>
+        <li>Train a flow-matching policy that outputs chunks of 5 actions (QC-FQL), pretrained offline on demos and then improved with online RL, from only a 16×16 wrist-camera image and joint state so it can transfer to the real arm.</li>
+        <li>Recovery demos with noise and deliberate missed grasps, plus a pessimistic critic target, took 3-cube unstacking to <strong>89% success</strong>; lifting reaches 94% with domain randomization for real-robot deployment.</li>
+      </ul>
+      <div class="results-grid" aria-label="Results">
+        <div><strong>23%</strong><span>Place3</span><small>3 cubes into a bin</small></div>
+        <div><strong>13%</strong><span>TrayPack3</span><small>3 cubes into assigned tray slots</small></div>
+        <div><strong>11%</strong><span>Tower3</span><small>Size-ordered 3-cube tower</small></div>
+      </div>
+      <div class="tags"><span class="tag">Q-Chunking</span><span class="tag">Flow Matching</span><span class="tag">Offline-to-Online RL</span><span class="tag">SO-101</span></div>
     </section>
 
     <section class="portfolio-section" aria-labelledby="selected-work-title">
@@ -93,6 +114,6 @@
     </section>
   </main>
 
-  <script src="animations.js" defer></script>
+  <script src="animations.js?v=2" defer></script>
 </body>
 </html>
