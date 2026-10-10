@@ -18,36 +18,81 @@
         <a class="active" href="index.html">Home</a>
         <a href="experience.html">Experience</a>
         <a href="projects.html">Projects</a>
+        <a href="blogs.html">Blogs</a>
       </div>
     </nav>
   </header>
 
-  <main class="shell">
-    <section class="page-grid" aria-labelledby="intro-title">
-      <div>
-        <p class="page-kicker">Robotics, RL and perception</p>
-        <h1 id="intro-title">Arhan <span class="highlight">Chavare</span></h1>
-        <p class="lede">I am an Electronics and Telecommunication Engineering student at VJTI Mumbai with a Data Science minor. My work sits around dexterous manipulation, reinforcement learning, visuomotor policies, and hardware-aware robotics software.</p>
-        <div class="actions">
-          <a class="button primary" href="projects.html">See projects</a>
-          <a class="button" href="mailto:arhanjain1606@gmail.com">Email me</a>
-        </div>
-        <div class="stats" aria-label="Profile summary">
-          <div class="stat"><span>Current</span><strong>RRC, IIIT Hyderabad</strong></div>
-          <div class="stat"><span>Education</span><strong>VJTI Mumbai</strong></div>
-          <div class="stat"><span>CGPA</span><strong>8.39 / 10</strong></div>
+  <main class="shell home-page">
+    <section class="profile-intro" aria-labelledby="intro-title">
+      <aside class="portrait-card" aria-label="Photo of Arhan Chavare">
+        <img src="self.jpeg" alt="Arhan Chavare" />
+      </aside>
+      <div class="intro-copy">
+        <h1 id="intro-title">Arhan Chavare</h1>
+        <p class="lede">I’m an Electronics and Telecommunication Engineering student at VJTI Mumbai, with a minor in Data Science. I work on learning-based robotics, with a focus on dexterous manipulation, visual policies, and deploying ideas on real hardware.</p>
+        <p class="intro-affiliation">Research Intern · Robotics Research Centre, IIIT Hyderabad</p>
+        <div class="social-links" aria-label="Contact and profiles">
+          <a href="mailto:arhanjain1606@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/arhan-chavare" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/4rhan" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="experience.html">Experience</a>
         </div>
       </div>
-      <aside class="portrait-card" aria-label="Photo of Arhan Chavare">
-        <img src="image.jpeg" alt="Arhan Chavare" />
-      </aside>
+    </section>
+
+    <section class="portfolio-section" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>I’m interested in building robots that can learn robust skills from visual input and interact with the physical world. My recent work includes dexterous grasping, camera-conditioned manipulation, and reinforcement learning for robotic systems.</p>
+      <div class="profile-facts">
+        <div><span>Education</span><strong>VJTI Mumbai</strong><small>B.Tech, Electronics and Telecommunication · Data Science minor · CGPA 8.39/10</small></div>
+        <div><span>Research</span><strong>RRC, IIIT Hyderabad</strong><small>Robotics Research Centre</small></div>
+        <div><span>Interests</span><strong>Robot learning</strong><small>Dexterous manipulation · Visual policies · Sim-to-real</small></div>
+      </div>
+    </section>
+
+    <section class="portfolio-section" aria-labelledby="selected-work-title">
+      <div class="section-heading">
+        <h2 id="selected-work-title">Selected work</h2>
+        <a href="projects.html">All projects <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="work-list">
+        <article class="work-item">
+          <div><h3>Camera-Conditioned Visuomotor Policies</h3><p>Improving camera-conditioned manipulation policies and evaluating them on a physical SO-101 arm.</p></div>
+          <span class="work-year">2026</span>
+        </article>
+        <article class="work-item">
+          <div><h3>Bionic Hand</h3><p>Retargeting human hand motion to a robotic hand and learning manipulation behaviors from demonstrations.</p></div>
+          <span class="work-year">2026</span>
+        </article>
+        <article class="work-item">
+          <div><h3>RubikNet</h3><p>A deep reinforcement learning Rubik’s Cube solver connected to robotic actuation.</p></div>
+          <span class="work-year">2025</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section experience-summary" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <h2 id="experience-title">Experience</h2>
+        <a href="experience.html">Full experience <span aria-hidden="true">→</span></a>
+      </div>
+      <article class="work-item">
+        <div><h3>Research Intern</h3><p>Robotics Research Centre, IIIT Hyderabad · Dexterous grasping and robot learning</p></div>
+        <span class="work-year">2026–Present</span>
+      </article>
+      <article class="work-item">
+        <div><h3>Core Member</h3><p>Society of Robotics and Automation, VJTI · Robotics workshops and project mentoring</p></div>
+        <span class="work-year">2025–Present</span>
+      </article>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div><h2 id="contact-title">Get in touch</h2><p>I’m happy to connect about robotics, research, or collaboration.</p></div>
+      <a class="contact-email" href="mailto:arhanjain1606@gmail.com">arhanjain1606@gmail.com <span aria-hidden="true">↗</span></a>
     </section>
   </main>
 
-  <footer class="shell footer-contact">
-    <span>© 2026 Arhan Chavare.</span>
-    <span><a href="mailto:arhanjain1606@gmail.com">arhanjain1606@gmail.com</a></span>
-    <span><a href="https://www.linkedin.com/in/arhan-chavare" target="_blank" rel="noreferrer">LinkedIn</a></span>
-  </footer>
+  <script src="animations.js" defer></script>
 </body>
 </html>

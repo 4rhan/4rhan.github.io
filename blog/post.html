@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Arhan Chavare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark"></span>Arhan Chavare</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../experience.html">Experience</a>
+        <a href="../projects.html">Projects</a>
+        <a class="active" href="../blogs.html">Blogs</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="shell post-page">
+    <a class="back-link" href="../blogs.html"><span aria-hidden="true">←</span> All posts</a>
+    <article id="post" aria-live="polite">
+      <p class="meta">Loading…</p>
+    </article>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="blog.js"></script>
+  <script src="../animations.js" defer></script>
+</body>
+</html>

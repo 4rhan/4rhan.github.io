@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "autodidactic-iteration",
+    "title": "Autodidactic Iteration: Learning Backwards from the Goal",
+    "authors": ["Arhan Chavare", "Rigvedi Borchate"],
+    "date": "2025-09",
+    "summary": "How RubikNet learns to solve a Rubik's Cube by starting from the solved state and working backwards, turning a sparse-reward problem into self-supervised learning.",
+    "tags": ["Reinforcement Learning", "RubikNet", "Self-Supervision"]
+  },
+  {
+    "slug": "flow-q-learning",
+    "title": "Flow Q-Learning",
+    "summary": "Combining flow-matching policies with Q-learning for offline RL.",
+    "comingSoon": true
+  }
+]
