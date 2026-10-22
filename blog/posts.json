@@ -1,16 +1,18 @@
 [
   {
+    "slug": "squinting-harder",
+    "title": "Squinting Harder",
+    "authors": ["Arhan Chavare"],
+    "date": "2026-10",
+    "summary": "Teaching a $100 SO-101 arm long, multi-stage tasks from a 16×16 pixel camera, with flow matching, Q-chunking, and one small change to the critic.",
+    "tags": ["Reinforcement Learning", "Robot Learning", "Flow Matching"]
+  },
+  {
     "slug": "autodidactic-iteration",
     "title": "Autodidactic Iteration: Learning Backwards from the Goal",
     "authors": ["Arhan Chavare", "Rigvedi Borchate"],
     "date": "2025-09",
     "summary": "How RubikNet learns to solve a Rubik's Cube by starting from the solved state and working backwards, turning a sparse-reward problem into self-supervised learning.",
     "tags": ["Reinforcement Learning", "RubikNet", "Self-Supervision"]
-  },
-  {
-    "slug": "flow-q-learning",
-    "title": "Flow Q-Learning",
-    "summary": "Combining flow-matching policies with Q-learning for offline RL.",
-    "comingSoon": true
   }
 ]

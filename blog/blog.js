@@ -63,7 +63,7 @@
   }
 
   function loadPosts(base) {
-    return fetch(new URL('posts.json', base)).then(function (r) {
+    return fetch(new URL('posts.json', base), { cache: 'no-cache' }).then(function (r) {
       if (!r.ok) throw new Error('Could not load posts.json');
       return r.json();
     });
@@ -96,7 +96,7 @@
       var post = posts.filter(function (p) { return p.slug === slug; })[0];
       if (!post || post.comingSoon) throw new Error('missing');
       var mdUrl = new URL(encodeURIComponent(post.slug) + '/post.md', base);
-      return fetch(mdUrl).then(function (r) {
+      return fetch(mdUrl, { cache: 'no-cache' }).then(function (r) {
         if (!r.ok) throw new Error('missing');
         return r.text();
       }).then(function (md) {
