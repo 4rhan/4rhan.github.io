@@ -51,8 +51,8 @@
   }
 
   function absolutize(container, base) {
-    container.querySelectorAll('img[src], a[href]').forEach(function (el) {
-      var attr = el.tagName === 'IMG' ? 'src' : 'href';
+    container.querySelectorAll('img[src], video[src], source[src], a[href]').forEach(function (el) {
+      var attr = el.tagName === 'A' ? 'href' : 'src';
       var value = el.getAttribute(attr);
       if (/^(#|[a-z]+:|\/)/i.test(value)) return;
       el.setAttribute(attr, new URL(value, base).href);

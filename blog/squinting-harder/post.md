@@ -103,6 +103,11 @@ I implemented QC-FQL inside the Squint framework. I kept Squint's small CNN, its
 
 QC-FQL beats the baseline on every task. Unstack3 is close to solved. The other three are no longer at zero, but there's still a long way to go: the policy usually gets the first cube right and loses it on the later ones. We evaluated the unstack3 task on the real robot and yeah it works.
 
+<figure>
+  <video src="assets/unstack3.mp4" controls autoplay muted loop playsinline preload="metadata"></video>
+  <figcaption>QC-FQL solving Unstack3: top cube to the table, then the middle one, base left in place.</figcaption>
+</figure>
+
 ## 3. Conclusion
 
 Squint showed that a tiny 16×16 wrist image is enough to learn short tasks. On its own, though, it can't get through a long, multi-stage one: random exploration almost never reaches the reward at the end. Adding demonstrations and QC-FQL changed that. On my four long-horizon tasks, success went from almost zero to **0.91 on Unstack3**, with real progress on TrayPack3, Place3 and Tower3.
